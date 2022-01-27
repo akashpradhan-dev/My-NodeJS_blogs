@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2>
+                                <%= article.title %>
+                            </h2>
+                        </div>
+                        <div class="col-md-12">
+                            <span>
+                                <small class="text-secondary">Author : Akash</small><br>
+                                <small class="text-secondary">Date : <%= article.date.toLocaleDateString() %> </small>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <span>
+                                <%= article.desc %>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 text-right">
+                <a href="/article/edit/<%= article._id  %> " class="btn btn-warning">Edit</a>
+                <a href="/article/delete/<%= article._id  %>" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </body>
+
+</html>
