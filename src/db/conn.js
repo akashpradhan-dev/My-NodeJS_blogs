@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
 mongoose
-  .connect(process.env.DB_CLOUD)
+  .connect(process.env.LOCAL_DB)
   .then(() => {
     console.log("Connection Successful!");
   })
-  .catch(() => {
-    console.error.bind(console, "connection error:");
+  .catch((err) => {
+    console.log(err);
   });

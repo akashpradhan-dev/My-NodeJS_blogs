@@ -4,14 +4,14 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "server.js",
-    "dev": "nodemon server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.1",
-    "bootstrap-icons": "^1.7.2",
     "dotenv": "^14.3.2",
     "ejs": "^3.1.6",
     "express": "^4.17.2",

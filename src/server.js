@@ -2,16 +2,16 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const bodyParser = require("body-parser");
-const fetchModel = require("./src/models/blogModel");
+const fetchModel = require("./models/blogModel");
 const port = process.env.port || 3030;
-const articlesRouter = require("./src/routes/articles");
+const articlesRouter = require("./routes/articles");
 require("dotenv").config();
 
-require("./src/db/conn");
+require("./db/conn");
 //Static filr serve
-app.use("/static", express.static(path.join(__dirname, "src/public")));
+app.use("/static", express.static(path.join(__dirname, "public")));
 //View Engine
-app.set("views", path.join(__dirname, "src/views"));
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 // for parsing application/json
